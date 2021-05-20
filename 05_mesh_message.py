@@ -40,3 +40,14 @@ For the network above, a message from Jayden to Adam should have this route:
   ['Jayden', 'Amelia', 'Adam']   """
 
 # Start coding from here
+def reconstruct_path(how_we_reached_nodes, start_node, end_node):
+shortest_path = []
+
+# Start from the end of the path and work backwards
+current_node = end_node
+
+while current_node:
+shortest_path.append(current_node)
+current_node = how_we_reached_nodes[current_node]
+
+return shortest_path
