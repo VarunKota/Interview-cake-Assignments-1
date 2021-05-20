@@ -27,3 +27,12 @@ No "shorting"—you need to buy before you can sell. Also, you can't buy and
 sell in the same time step—at least 1 minute has to pass. """
 
 # Start coding from here
+maximum_profit = 0
+n=int(input("enter the length of list:"))
+stock_prices=[]
+for i in range (0,n):
+  stock_prices.append(int(input("enter the prices:")))
+for i in  range(len(stock_prices)):
+   for j in range(i+1,len(stock_prices)):
+     maximum_profit = max(maximum_profit,stock_prices[j]-stock_prices[i]) 
+print("maximum profit is :",maximum_profit)
