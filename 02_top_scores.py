@@ -27,3 +27,13 @@ going to change. Even if we do redesign the game a little, the scores will stay
 around the same order of magnitude. """
 
 # Start coding from here
+unsorted_scores=[]
+n=int(input("enter no.of inputs:"))
+print("Enter the elements in the list:")
+for i in range(n):
+       unsorted_scores.append((input()))
+unsorted_scores[:]=list(map(int,unsorted_scores))
+if (i<=100):
+        a=(list(reversed(sorted(unsorted_scores))))
+print("The unsorted scores are: ",unsorted_scores) 
+print("The final scores are:",a)
