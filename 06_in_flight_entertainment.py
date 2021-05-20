@@ -15,3 +15,33 @@ Don't make your users watch the same movie twice
 Optimize for runtime over memory. """
 
 # Start coding from here
+function brute_infligth (flight_length, movie_length) {
+  var i = 0, j = 0, first_movie, second_movie;
+
+  for (; first_movie = movie_length[i++];) {
+    for (j = i; second_movie = movie_length[j++];) {
+      if (first_movie + second_movie == flight_length) {
+        return true;
+      }
+    }
+  }
+  
+  return false;
+}
+
+// O(n) and can't show one movie twice
+function hash_infligth (flight_length, movie_length) {
+  var hash = {}, first_movie, second_movie, i = 0;
+
+  for (; first_movie = movie_length[i++];) {
+    second_movie = flight_length - first_movie;
+
+    if (second_movie in hash) {
+      return true;
+    }
+
+    hash[first_movie] = true;
+  }
+
+  return false;  
+}
