@@ -39,3 +39,14 @@ Using this, find a duplicate integer in O(n) time while keeping our space cost a
 O(1).  """
 
 # Start coding from here
+a=[]
+x=int(input("Enter the range of elements :"))
+for i in range (0,x):
+    a.append(int(input("Enter elements into list:")))
+print("\nThe elements in the list are:",a)
+b=[]
+for i in range (0,x):
+    if a[i] not in b:
+        b.append(a[i])
+    else:
+        print("\nTHE DUPLICATE ELEMENT IS:",a[i])
