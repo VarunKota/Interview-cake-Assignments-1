@@ -19,3 +19,15 @@ by calculating:
 Here's the catch: You can't use division in your solution! """
 
 # Start coding from here
+def get_products_of_all_ints_except_at_index(main_list):
+    total = 1
+    for n in main_list:
+        total=total* n
+    return total
+List = [1, 7, 3, 4]
+N = len(List)
+for i in range(N):
+ BaseList=([List[0:i] + List[i+1:N]])
+ for a in BaseList:
+  products= get_products_of_all_ints_except_at_index(a)
+  print(products)
